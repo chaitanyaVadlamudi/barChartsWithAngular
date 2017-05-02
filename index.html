@@ -1,0 +1,32 @@
+<html ng-app="barCharts">
+
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap.css">
+    <script src="node_modules/jquery.js"></script>
+    <script src="node_modules/bootstrap.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="barCtrl">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 style="color:brown" class="text-center">Bar chart which displays sum of data within one hour</h4>
+
+                <canvas id="bar" class="chart chart-bar" chart-data="mallData" chart-labels="keysArray" chart-series="category" chart-options="options"></canvas>
+            </div>
+            <div class="col-lg-12">
+                <h4 style="color:brown" class="text-center">Pie chart which gives sum of total data present in thingspace for the thing (last 500 dweets)</h4>
+
+                <canvas id="pie" class="chart chart-pie" chart-data="pieChartData" chart-labels="labels" chart-options="pieChartOptions"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
